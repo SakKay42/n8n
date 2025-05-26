@@ -93,7 +93,8 @@ if (!inE2ETests && !inTest) {
 		}
 	});
 }
-
+config.set('userManagement.disabled', true);
+config.set('security.basicAuth.active', true);
 // Validate Configuration
 config.validate({
 	allowed: 'strict',
