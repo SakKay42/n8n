@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Laundry Modbus MVP</title>
+	<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+	<header>
+		<div>
+			<p class="eyebrow">RS-485 / Modbus RTU</p>
+			<h1>Laundry control dashboard</h1>
+		</div>
+		<button id="refresh">Refresh now</button>
+	</header>
+	<main>
+		<section>
+			<h2>Machines</h2>
+			<div id="machines" class="machine-grid"></div>
+		</section>
+		<section class="panels">
+			<div>
+				<h2>Transactions</h2>
+				<table id="transactions"></table>
+			</div>
+			<div>
+				<h2>Technical events</h2>
+				<table id="events"></table>
+			</div>
+		</section>
+	</main>
+	<script src="/static/app.js"></script>
+</body>
+</html>

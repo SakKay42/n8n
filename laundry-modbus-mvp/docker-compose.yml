@@ -1,0 +1,15 @@
+services:
+  backend:
+    build: .
+    env_file: .env.example
+    ports:
+      - "8000:8000"
+    volumes:
+      - laundry-data:/app/data
+      - ./config:/app/config:ro
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    # For simulator-only development on machines without USB-RS485, remove the devices block above.
+
+volumes:
+  laundry-data:
